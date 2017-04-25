@@ -1,11 +1,11 @@
 require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe User, type: :model do
   context "validations" do
-      it { is_expected.to validate_presence_of(:username) }
-      it { is_expected.to validate_presence_of(:email) }
-      it { is_expected.to validate_presence_of(:password) }
-      it { is_expected.to validate_presence_of(:password_confirmation) }
+      it { should validate_presence_of(:username) }
+      it { should validate_presence_of(:email) }
+      it { should validate_presence_of(:password) }
   end
 
   context 'associations with dependency' do
