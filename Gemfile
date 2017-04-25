@@ -14,6 +14,7 @@ gem 'hiredis'
 gem 'holdem'
 gem 'filterrific'
 gem 'faker'
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
