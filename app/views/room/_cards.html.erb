@@ -1,0 +1,19 @@
+
+<h2>Table Cards</h2>
+<div class="">
+  <% if @table_cards.count > 0 %>
+    <% @table_cards.each do |c| %>
+      <%= image_tag c["image"] %>
+    <% end %>
+  <% end %>
+</div>
+
+
+<h2>Your Hand</h2>
+<div class="">
+  <% if @player_cards.count > 0 %>
+    <% @player_cards.each do |c| %>
+      <%= image_tag c["image"] %>
+    <% end %>
+  <% end %>
+</div>

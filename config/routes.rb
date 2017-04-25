@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create_from_omniauth'
   get 'auth/failure' => 'sessions#new'
 
+  get 'home' => 'room#home'
+  get 'start' => 'room#start'
+  get 'flop' => 'room#flop'
+  get 'turn' => 'room#turn'
+  get 'river' => 'room#river'
+  get 'check' => 'room#check'
 end

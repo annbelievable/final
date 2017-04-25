@@ -1,9 +1,12 @@
+
+#example of omniauth hash from google auth
+
 <OmniAuth::AuthHash credentials=
   #<OmniAuth::AuthHash
     expires=true
     expires_at=1492506019
     token="ya29.GlsxBEgclXz1H77n3rUP0w7DD7a1RrocFSSGnGUWnSr__VGfRGrPy2ODP6a2azAMI70RdqSE5sIYue-UvVuAdcHUlDJkO679g8_L--1mSFigqQtu2cDes9u2sJiT">
-  
+
   extra=#<OmniAuth::AuthHash
     id_info=#<OmniAuth::AuthHash
     at_hash="gigXQuSTcJEiDGr9z2sJIg"

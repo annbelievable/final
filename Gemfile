@@ -9,7 +9,11 @@ gem "bcrypt"
 gem "figaro"
 gem "omniauth"
 gem "omniauth-google-oauth2"
-# gem "redis"
+gem "redis"
+gem 'hiredis'
+gem 'holdem'
+gem 'filterrific'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -41,8 +45,32 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'guard'
+  gem 'guard-puma'
+  gem 'guard-rspec'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+  gem 'puffing-billy'
+  gem 'rb-fsevent'
+  gem 'rspec'
+  gem "rspec-given"
+  gem 'rspec-rails'
+  gem 'shoulda-callback-matchers'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'poltergeist'
+  gem 'shoulda-matchers'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

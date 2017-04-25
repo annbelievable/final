@@ -1,0 +1,47 @@
+
+<%= link_to 'Start Playing Poker', start_path %>
+
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%= f.text_field(:with_name, class: 'filterrific-periodically-observed') %>
+  </div>
+  <div>
+    Type
+    <%= f.select(:with_type, @filterrific.select_options[:with_type], { include_blank: '- Any -' }) %>
+  </div>
+  <div>
+    Number of Players
+    <%= f.select(:nop, @filterrific.select_options[:nop], { include_blank: '- Any -' }) %>
+  </div>
+  <div>
+    Ratings
+    <%= f.select(:ratings, @filterrific.select_options[:ratings], { include_blank: '- Any -' }) %>
+  </div>
+  <div>
+    <%= link_to('Reset filters', reset_filterrific_url) %>
+  </div>
+<% end %>
+
+<h1>List of Games</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Number of Players(max)</th>
+      <th>Ratings</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |x| %>
+      <tr>
+        <td><%= x.game %></td>
+        <td><%= x.game_type %></td>
+        <td><%= x.number_of_players %></td>
+        <td><%= x.ratings %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

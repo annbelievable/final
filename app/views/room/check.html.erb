@@ -1,0 +1,9 @@
+
+<%= link_to 'New Game', home_path %>
+
+<br>
+<h1>Your best cards: <%= @compared.poker_rank.rank %></h1>
+
+<% @best_cards.each do |c| %>
+  <%= image_tag c %>
+<% end %>
